@@ -8,7 +8,7 @@ interface Props {
 }
 
 const AuditLog = ({ auditLog }: Props) => {
-	const [expanded, setIsExpanded] = useState<boolean>(false)
+	const [expanded, setIsExpanded] = useState<boolean>(true)
 	const handleExpand = () => setIsExpanded(!expanded)
 
 	return (
@@ -31,7 +31,7 @@ const AuditLog = ({ auditLog }: Props) => {
 						{auditLog.length && (
 							<div className='space-y-4'>
 								{auditLog.map((i) => {
-									return <p className='text-sm text-gray-500'>{i}</p>
+									return <p key={i} className='text-sm text-gray-500'>{i}</p>
 								})}
 							</div>
 						)}
