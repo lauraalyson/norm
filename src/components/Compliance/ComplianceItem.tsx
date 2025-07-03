@@ -25,12 +25,14 @@ const ComplianceItem = ({
 	}
 
 	return (
-		<div className={clsx('border-b', subtask && 'ml-12 !text-sm border-none')}>
+		<div
+			className={clsx(
+				'border-b border-gray-200',
+				subtask && 'ml-12 !text-sm border-none'
+			)}
+		>
 			<div
-				className={clsx(
-					' border-gray-200 px-2 py-4 bg-white flex',
-					subtask && 'border-none'
-				)}
+				className={clsx('px-2 py-4 bg-white flex', subtask && 'border-none')}
 			>
 				<div className='w-10'>
 					<Button
@@ -47,12 +49,13 @@ const ComplianceItem = ({
 								<ChevronRight size={16} />
 							))}
 					</Button>
+					{subtask && <CornerDownRight size={16} />}
 				</div>
 
 				<div className='w-full'>
 					<div className='flex justify-between items-center mb-2'>
 						<div className='flex gap-1'>
-							{subtask && <CornerDownRight size={16} />}
+							
 							<h3 className={clsx('font-medium')}>{name}</h3>
 							<Badge
 								text={currentStatus || ''}

@@ -8,7 +8,7 @@ interface Props {
 
 const ComplianceOverview = ({ isCompliant, complianceOverview }: Props) => {
 	return (
-		<div className='p-4 flex w-full justify-between items-end border-b'>
+		<div className='sticky top-0 bg-white p-4 flex w-full justify-between items-end border-b'>
 			<div>
 				<h2 className='mb-2 text-lg font-medium'>Overview</h2>
 				<p className='text-gray-700'>Document #{complianceOverview.id}</p>

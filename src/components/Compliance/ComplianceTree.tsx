@@ -10,7 +10,7 @@ const ComplianceTree = ({
 	onToggle,
 }: ComplianceTreeProps) => {
 	return (
-		<div className='h-[600px] overflow-scroll'>
+		<div className='h-fit overflow-scroll'>
 			{complianceChildren.map((child) => (
 				<ComplianceItem
 					key={child.id}
